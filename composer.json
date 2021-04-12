@@ -1,6 +1,6 @@
 {
     "type": "project",
-    "name": "jacopo89/php-backend-generatorgauf",
+    "name": "jacopo89/php-backend-generator",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
