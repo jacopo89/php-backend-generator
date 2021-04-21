@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Validator;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Validator;
 
 use Symfony\Component\Validator\Constraint;
 

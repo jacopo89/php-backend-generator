@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Validator;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Validator;
 
 
-use BackendGenerator\Bundle\Entity\File;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Entity\File;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;

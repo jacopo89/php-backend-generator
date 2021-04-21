@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Serializer\Normalizer;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Serializer\Normalizer;
 
-use BackendGenerator\Bundle\Model\Enum\EnumInterface;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\Enum\EnumInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\CacheableSupportsMethodInterface;

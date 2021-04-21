@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Service;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Service;
 
-use BackendGenerator\Bundle\Entity\File;
-use BackendGenerator\Bundle\Model\FileToUpload;
-use BackendGenerator\Bundle\Repository\FileRepository;
-use BackendGenerator\Bundle\Service\File\Upload\FileUploadService;
-use BackendGenerator\Bundle\Service\File\Upload\ImageUploadService;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Entity\File;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\FileToUpload;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Repository\FileRepository;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Service\File\Upload\FileUploadService;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Service\File\Upload\ImageUploadService;
 
 class FileFactory
 {

@@ -1,6 +1,6 @@
 <?php
 
-use BackendGenerator\Bundle\Kernel;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Kernel;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;

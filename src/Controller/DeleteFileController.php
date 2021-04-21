@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Controller;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Controller;
 
-use BackendGenerator\Bundle\Exception\FileAttributeNotFoundException;
-use BackendGenerator\Bundle\Provider\ResourceRepositoryProvider;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Exception\FileAttributeNotFoundException;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Provider\ResourceRepositoryProvider;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;

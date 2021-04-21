@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Exception;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Exception;
 
 class DateException extends \Exception
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace BackendGenerator\Bundle\Entity;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use BackendGenerator\Bundle\Annotation\ResourceProperty;
-use BackendGenerator\Bundle\Validator\ImageFile;
-use BackendGenerator\Bundle\Validator\PdfFile;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Annotation\ResourceProperty;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Validator\ImageFile;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Validator\PdfFile;
 use Doctrine\ORM\Mapping as ORM;
-use BackendGenerator\Bundle\Model\FileToUpload;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\FileToUpload;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**

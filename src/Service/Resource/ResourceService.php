@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Service\Resource;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Service\Resource;
 
 
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\BooleanFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
-use BackendGenerator\Bundle\Annotation\ResourceProperty;
-use BackendGenerator\Bundle\Model\JsonData;
-use BackendGenerator\Bundle\Provider\ResourceInterface;
-use BackendGenerator\Bundle\Provider\ResourceProvider;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Annotation\ResourceProperty;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\JsonData;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Provider\ResourceInterface;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Provider\ResourceProvider;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Collections\Collection;
 use ReflectionClass;

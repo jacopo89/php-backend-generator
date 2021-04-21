@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Model;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Model;
 
 class Ordinal
 {

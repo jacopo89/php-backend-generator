@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BackendGenerator\Bundle\Normalizer;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Normalizer;
 
 
 class DateTimeNormalizer extends \Symfony\Component\Serializer\Normalizer\DateTimeNormalizer

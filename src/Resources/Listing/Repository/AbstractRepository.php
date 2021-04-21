@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Resources\Listing\Repository;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Repository;
 
-use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListing;
-use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListingCollection;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Model\ResourceListing;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Model\ResourceListingCollection;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 abstract class AbstractRepository extends ServiceEntityRepository

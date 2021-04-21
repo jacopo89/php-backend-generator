@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Service;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Service;
 
-use BackendGenerator\Bundle\Entity\File;
-use BackendGenerator\Bundle\Model\FileToUpload;
-use BackendGenerator\Bundle\Model\UploadedBase64File;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Entity\File;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\FileToUpload;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\UploadedBase64File;
 
 class Base64Uploader
 {

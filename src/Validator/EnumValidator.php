@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Validator;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Validator;
 
 
-use BackendGenerator\Bundle\Model\Enum\EnumInterface;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\Enum\EnumInterface;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;

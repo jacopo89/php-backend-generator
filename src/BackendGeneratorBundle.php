@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BackendGenerator\Bundle;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle;
 
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

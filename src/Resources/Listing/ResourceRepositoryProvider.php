@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Resources\Listing;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing;
 
-use BackendGenerator\Bundle\Provider\ResourceProvider;
-use BackendGenerator\Bundle\Resources\Listing\Exception\ListingRepositoryAlreadyDefinedException;
-use BackendGenerator\Bundle\Resources\Listing\Exception\UndefinedListingRepositoryException;
-use BackendGenerator\Bundle\Resources\Listing\Repository\Factory\GenericListingRepositoryFactory;
-use BackendGenerator\Bundle\Resources\Listing\Repository\ListingRepositoryInterface;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Provider\ResourceProvider;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Exception\ListingRepositoryAlreadyDefinedException;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Exception\UndefinedListingRepositoryException;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Repository\Factory\GenericListingRepositoryFactory;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Repository\ListingRepositoryInterface;
 
 class ResourceRepositoryProvider
 {

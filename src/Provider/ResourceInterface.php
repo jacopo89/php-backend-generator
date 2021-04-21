@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Provider;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Provider;
 
 
 interface ResourceInterface

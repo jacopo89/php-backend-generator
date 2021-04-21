@@ -1,6 +1,6 @@
 <?php
 
-namespace BackendGenerator\Bundle\Annotation;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Annotation;
 
 use Doctrine\ORM\Mapping\Annotation;
 

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Repository;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Repository;
 
-use BackendGenerator\Bundle\Entity\File;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Entity\File;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

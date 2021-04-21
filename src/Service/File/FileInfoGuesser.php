@@ -1,11 +1,11 @@
 <?php
 
 
-namespace BackendGenerator\Bundle\Service\File;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Service\File;
 
 
-use BackendGenerator\Bundle\Model\FileInfo;
-use BackendGenerator\Bundle\Model\MimeType;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\FileInfo;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Model\MimeType;
 use Symfony\Component\Mime\MimeTypes;
 
 class FileInfoGuesser

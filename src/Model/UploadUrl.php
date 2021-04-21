@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BackendGenerator\Bundle\Model;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Model;
 
 
 class UploadUrl

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Resources\Listing\Exception;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Exception;
 
 class UndefinedListingRepositoryException extends \Exception
 {

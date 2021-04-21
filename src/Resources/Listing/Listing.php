@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Resources\Listing;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing;
 
-use BackendGenerator\Bundle\Resources\Listing\Exception\UndefinedListingRepositoryException;
-use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListingCollection;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Exception\UndefinedListingRepositoryException;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Model\ResourceListingCollection;
 
 class Listing
 {

@@ -66,12 +66,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BackendGenerator\\Bundle\\": "src/"
+            "BackendGenerator\\Bundle\\BackendGeneratorBundle": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BackendGenerator\\Bundle\\Tests\\": "tests/"
+            "BackendGenerator\\Bundle\\BackendGeneratorBundle\\Tests\\": "tests/"
         }
     },
     "replace": {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Service;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Service;
 
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\PropertyNormalizer;

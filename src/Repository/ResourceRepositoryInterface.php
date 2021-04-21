@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Repository;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Repository;
 
 interface ResourceRepositoryInterface
 {

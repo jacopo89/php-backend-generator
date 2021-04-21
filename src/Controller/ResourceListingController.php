@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace BackendGenerator\Bundle\Controller;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Controller;
 
-use BackendGenerator\Bundle\Resources\Listing\Listing;
-use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListingCollection;
-use BackendGenerator\Bundle\Service\PropertiesSerializer;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Listing;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Resources\Listing\Model\ResourceListingCollection;
+use BackendGenerator\Bundle\BackendGeneratorBundle\Service\PropertiesSerializer;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

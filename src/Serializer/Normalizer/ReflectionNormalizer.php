@@ -1,8 +1,8 @@
 <?php
 
-namespace BackendGenerator\Bundle\Serializer\Normalizer;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle\Serializer\Normalizer;
 
-use BackendGenerator\Bundle\DTO\Contract\ContractOutput;
+use BackendGenerator\Bundle\BackendGeneratorBundle\DTO\Contract\ContractOutput;
 use Symfony\Component\Serializer\Normalizer\CacheableSupportsMethodInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
