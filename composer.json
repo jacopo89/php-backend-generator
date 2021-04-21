@@ -1,7 +1,16 @@
 {
+    "description": "This bundle helps define a resource model of entities",
+    "homepage": "",
+    "keywords": ["generator", "code generator", "scaffolding", "scaffold"],
+    "authors": [
+        {
+            "name": "Symfony Community",
+            "homepage": "https://symfony.com/contributors"
+        }
+    ],
     "type": "symfony-bundle",
     "name": "jacopo89/php-backend-generator",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
