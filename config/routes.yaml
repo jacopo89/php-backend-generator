@@ -1,3 +1,8 @@
 #index:
 #    path: /
 #    controller: BackendGenerator\Bundle\Controller\DefaultController::index
+backend_generator_get_resources:
+  path: /resources
+  # the controller value has the format 'controller_class::method_name'
+  controller: BackendGenerator\Bundle\Controller\ResourceController::getResources
+
