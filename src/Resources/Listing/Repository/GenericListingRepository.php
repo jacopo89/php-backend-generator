@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Resources\Listing\Repository;
+namespace BackendGenerator\Bundle\Resources\Listing\Repository;
 
 use Doctrine\Persistence\ManagerRegistry;
 

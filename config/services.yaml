@@ -19,7 +19,7 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    App\:
+    BackendGenerator\Bundle\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
@@ -30,7 +30,7 @@ services:
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    App\Controller\:
+    BackendGenerator\Bundle\Controller\:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
@@ -40,11 +40,11 @@ services:
 
     _instanceof:
         # services whose classes are instances of CustomInterface will be tagged automatically
-        App\Provider\ResourceInterface:
+        BackendGenerator\Bundle\Provider\ResourceInterface:
             tags: [ 'app.resource_tag' ]
-        App\Resources\Listing\Repository\ListingRepositoryInterface:
+        BackendGenerator\Bundle\Resources\Listing\Repository\ListingRepositoryInterface:
             tags: [ 'app.listing_repository_tag' ]
-        App\Repository\ResourceRepositoryInterface:
+        BackendGenerator\Bundle\Repository\ResourceRepositoryInterface:
             tags: ['app.resource_repository_tag']
 
 
@@ -52,27 +52,27 @@ services:
     # please note that last definitions always *replace* previous ones
 
     gesdinet.jwtrefreshtoken.refresh_token_manager:
-        class: App\Doctrine\RefreshTokenManager
+        class: BackendGenerator\Bundle\Doctrine\RefreshTokenManager
         public: true
         arguments: [ '@doctrine.orm.default_entity_manager', 'Gesdinet\JWTRefreshTokenBundle\Entity\RefreshToken' ]
 
-    App\Swagger\SwaggerDecorator:
+    BackendGenerator\Bundle\Swagger\SwaggerDecorator:
         decorates: 'api_platform.swagger.normalizer.documentation'
-        arguments: [ '@App\Swagger\SwaggerDecorator.inner' ]
+        arguments: [ '@BackendGenerator\Bundle\Swagger\SwaggerDecorator.inner' ]
         autoconfigure: false
 
-    App\Listener\FileListener:
+    BackendGenerator\Bundle\Listener\FileListener:
         tags:
             - {name: doctrine.orm.entity_listener }
 
-    App\Provider\ResourceProvider:
+    BackendGenerator\Bundle\Provider\ResourceProvider:
         arguments:
             - !tagged_iterator app.resource_tag
 
-    App\Resources\Listing\ResourceRepositoryProvider:
+    BackendGenerator\Bundle\Resources\Listing\ResourceRepositoryProvider:
         arguments:
             - !tagged_iterator app.listing_repository_tag
 
-    App\Provider\ResourceRepositoryProvider:
+    BackendGenerator\Bundle\Provider\ResourceRepositoryProvider:
         arguments:
             - !tagged_iterator app.resource_repository_tag

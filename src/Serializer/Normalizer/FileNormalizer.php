@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Serializer\Normalizer;
+namespace BackendGenerator\Bundle\Serializer\Normalizer;
 
-use App\Entity\File;
-use App\Model\UploadedBase64File;
-use App\Repository\FileRepository;
-use App\Service\Base64Uploader;
+use BackendGenerator\Bundle\Entity\File;
+use BackendGenerator\Bundle\Model\UploadedBase64File;
+use BackendGenerator\Bundle\Repository\FileRepository;
+use BackendGenerator\Bundle\Service\Base64Uploader;
 use Symfony\Component\Serializer\Normalizer\ContextAwareDenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\CacheableSupportsMethodInterface;

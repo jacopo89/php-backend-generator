@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace BackendGenerator\Bundle\Controller;
 
-use App\Exception\FileAttributeNotFoundException;
-use App\Provider\ResourceRepositoryProvider;
+use BackendGenerator\Bundle\Exception\FileAttributeNotFoundException;
+use BackendGenerator\Bundle\Provider\ResourceRepositoryProvider;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DeleteFileController extends AbstractController
 {
     /**
-     * @Route("/{resourceName}/{resourceId}/{attribute}/{fileId}", name="delete_resource_file", methods={"DELETE"})
+     * @Route("/{resourceName}/{resourceId}/{attribute}/{fileId}", name="backend_generator_delete_resource_file", methods={"DELETE"})
      */
     public function deleteFile(ResourceRepositoryProvider $resourceRepositoryProvider, string $resourceName, string $resourceId, string $attribute, string $fileId): Response
     {

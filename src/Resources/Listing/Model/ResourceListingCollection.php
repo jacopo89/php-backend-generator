@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Resources\Listing\Model;
+namespace BackendGenerator\Bundle\Resources\Listing\Model;
 
 class ResourceListingCollection
 {

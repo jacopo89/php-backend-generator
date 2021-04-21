@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service;
+namespace BackendGenerator\Bundle\Service;
 
-use App\Exception\DateException;
+use BackendGenerator\Bundle\Exception\DateException;
 
 class MonthCalculator
 {

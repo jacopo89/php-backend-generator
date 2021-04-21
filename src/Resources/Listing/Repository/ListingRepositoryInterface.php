@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Resources\Listing\Repository;
+namespace BackendGenerator\Bundle\Resources\Listing\Repository;
 
-use App\Resources\Listing\Model\ResourceListingCollection;
+use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListingCollection;
 
 interface ListingRepositoryInterface
 {

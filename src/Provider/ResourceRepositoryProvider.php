@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Provider;
+namespace BackendGenerator\Bundle\Provider;
 
 
-use App\Exception\AlreadyDefinedResourceException;
-use App\Exception\UndefinedResourceException;
-use App\Repository\ResourceRepositoryInterface;
+use BackendGenerator\Bundle\Exception\AlreadyDefinedResourceException;
+use BackendGenerator\Bundle\Exception\UndefinedResourceException;
+use BackendGenerator\Bundle\Repository\ResourceRepositoryInterface;
 
 class ResourceRepositoryProvider
 {

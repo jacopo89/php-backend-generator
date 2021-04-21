@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service\File\Upload;
+namespace BackendGenerator\Bundle\Service\File\Upload;
 
 use Gaufrette\Filesystem;
 use Gaufrette\Extras\Resolvable\ResolvableFilesystem;

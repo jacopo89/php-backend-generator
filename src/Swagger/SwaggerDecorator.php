@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Swagger;
+namespace BackendGenerator\Bundle\Swagger;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use App\Model\Url;
+use BackendGenerator\Bundle\Model\Url;
 
 final class SwaggerDecorator implements NormalizerInterface
 {

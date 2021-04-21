@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Resources\Listing\Repository\Factory;
+namespace BackendGenerator\Bundle\Resources\Listing\Repository\Factory;
 
-use App\Provider\ResourceInterface;
-use App\Resources\Listing\Repository\GenericListingRepository;
+use BackendGenerator\Bundle\Provider\ResourceInterface;
+use BackendGenerator\Bundle\Resources\Listing\Repository\GenericListingRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 class GenericListingRepositoryFactory

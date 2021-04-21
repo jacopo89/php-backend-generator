@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service\File;
+namespace BackendGenerator\Bundle\Service\File;
 
 use Symfony\Component\String\Slugger\AsciiSlugger;
 

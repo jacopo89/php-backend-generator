@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Listener;
+namespace BackendGenerator\Bundle\Listener;
 
-use App\Entity\File;
+use BackendGenerator\Bundle\Entity\File;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Gaufrette\Filesystem;
 

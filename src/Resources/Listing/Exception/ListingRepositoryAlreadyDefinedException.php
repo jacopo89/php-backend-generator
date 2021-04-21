@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Resources\Listing\Exception;
+namespace BackendGenerator\Bundle\Resources\Listing\Exception;
 
 class ListingRepositoryAlreadyDefinedException extends \Exception
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Service;
+namespace BackendGenerator\Bundle\Service;
 
 
 class Base64decoder

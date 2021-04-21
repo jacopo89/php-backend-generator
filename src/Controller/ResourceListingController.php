@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace BackendGenerator\Bundle\Controller;
 
-use App\Resources\Listing\Listing;
-use App\Resources\Listing\Model\ResourceListingCollection;
-use App\Service\PropertiesSerializer;
+use BackendGenerator\Bundle\Resources\Listing\Listing;
+use BackendGenerator\Bundle\Resources\Listing\Model\ResourceListingCollection;
+use BackendGenerator\Bundle\Service\PropertiesSerializer;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ResourceListingController
 {
     /**
-     * @Route("/listing/{resource}", methods={"GET"}, name="resources_listing")
+     * @Route("/listing/{resource}", methods={"GET"}, name="backend_generator_resources_listing")
      * @return Response
      */
     public function listings(string $resource, Listing $listing, PropertiesSerializer $serializer, Request $request): Response
@@ -40,7 +40,7 @@ class ResourceListingController
     }
 
     /**
-     * @Route("/listings", methods={"POST"}, name="resources_listings")
+     * @Route("/listings", methods={"POST"}, name="backend_generator_resources_listings")
      * @return Response
      */
     public function listingsBlock(Listing $listing, PropertiesSerializer $serializer, Request $request): Response

@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service\Resource;
+namespace BackendGenerator\Bundle\Service\Resource;
 
 
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\BooleanFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
-use App\Annotation\ResourceProperty;
-use App\Model\JsonData;
-use App\Provider\ResourceInterface;
-use App\Provider\ResourceProvider;
+use BackendGenerator\Bundle\Annotation\ResourceProperty;
+use BackendGenerator\Bundle\Model\JsonData;
+use BackendGenerator\Bundle\Provider\ResourceInterface;
+use BackendGenerator\Bundle\Provider\ResourceProvider;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Collections\Collection;
 use ReflectionClass;
@@ -20,7 +20,7 @@ class ResourceService
 {
     private Reader $annotationReader;
     private ResourceProvider $resourceProvider;
-    private const FILE_ENTITY = "App\Entity\File";
+    private const FILE_ENTITY = "BackendGenerator\Bundle\Entity\File";
 
     public function __construct(Reader $reader, ResourceProvider $resourceProvider)
     {

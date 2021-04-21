@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Model;
+namespace BackendGenerator\Bundle\Model;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use App\Service\Base64decoder;
-use App\Service\File\FileInfoGuesser;
+use BackendGenerator\Bundle\Service\Base64decoder;
+use BackendGenerator\Bundle\Service\File\FileInfoGuesser;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace BackendGenerator\Bundle\Controller;
 
-use App\Provider\ResourceProvider;
-use App\Service\Resource\NewResourceService;
-use App\Service\Resource\ResourceService;
+use BackendGenerator\Bundle\Provider\ResourceProvider;
+use BackendGenerator\Bundle\Service\Resource\NewResourceService;
+use BackendGenerator\Bundle\Service\Resource\ResourceService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,7 +14,7 @@ class ResourceController extends AbstractController
 {
 
     /**
-     * @Route("/resources", methods={"GET"}, name="get-resources")
+     * @Route("/resources", methods={"GET"}, name="backend_generator_get_resources")
      * @param ResourceProvider $resourceProvider
      * @param ResourceService $resourceService
      * @return Response
@@ -33,12 +33,12 @@ class ResourceController extends AbstractController
 
 
     /**
-     * @Route("/resource/{name}", methods={"GET"}, name="get-resource")
+     * @Route("/resource/{name}", methods={"GET"}, name="backend_generator_get_resource")
      * @param ResourceProvider $resourceProvider
      * @param ResourceService $resourceService
      * @param $name
      * @return Response
-     * @throws \App\Exception\UndefinedResourceException
+     * @throws \BackendGenerator\Bundle\Exception\UndefinedResourceException
      */
     public function getResource(ResourceProvider $resourceProvider, ResourceService $resourceService, $name): Response
     {

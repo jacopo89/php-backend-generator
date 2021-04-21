@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Model;
+namespace BackendGenerator\Bundle\Model;
 
 
 use Symfony\Component\Security\Core\Authorization\Voter\AuthenticatedVoter;

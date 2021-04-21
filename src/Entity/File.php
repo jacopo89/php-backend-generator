@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Entity;
+namespace BackendGenerator\Bundle\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use App\Annotation\ResourceProperty;
-use App\Validator\ImageFile;
-use App\Validator\PdfFile;
+use BackendGenerator\Bundle\Annotation\ResourceProperty;
+use BackendGenerator\Bundle\Validator\ImageFile;
+use BackendGenerator\Bundle\Validator\PdfFile;
 use Doctrine\ORM\Mapping as ORM;
-use App\Model\FileToUpload;
+use BackendGenerator\Bundle\Model\FileToUpload;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource(
- *     attributes={"security"="is_granted(constant('\\App\\Model\\UserRoles::ADMIN'))"},
+ *     attributes={"security"="is_granted(constant('\\BackendGenerator\Bundle\\Model\\UserRoles::ADMIN'))"},
  *     collectionOperations={"get"},
  * )
  * @ORM\Entity()
- * @ORM\EntityListeners({"App\Listener\FileListener"})
+ * @ORM\EntityListeners({"BackendGenerator\Bundle\Listener\FileListener"})
  * @ImageFile(groups={"imagefile"})
  * @PdfFile(groups={"pdffile"})
  */

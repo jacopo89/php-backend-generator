@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Model;
+namespace BackendGenerator\Bundle\Model;
 
-use App\Service\Base64decoder;
-use App\Service\File\FileInfoGuesser;
-use App\Service\File\FileNameGenerator;
+use BackendGenerator\Bundle\Service\Base64decoder;
+use BackendGenerator\Bundle\Service\File\FileInfoGuesser;
+use BackendGenerator\Bundle\Service\File\FileNameGenerator;
 
 class FileToUpload
 {

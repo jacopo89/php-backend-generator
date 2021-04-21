@@ -1,5 +1,5 @@
 <?php
-namespace App\Doctrine;
+namespace BackendGenerator\Bundle\Doctrine;
 
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;

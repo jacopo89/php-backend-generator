@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service\File\Upload;
+namespace BackendGenerator\Bundle\Service\File\Upload;
 
-use App\Model\FileToUpload;
-use App\Model\UploadUrl;
+use BackendGenerator\Bundle\Model\FileToUpload;
+use BackendGenerator\Bundle\Model\UploadUrl;
 use Gaufrette\Filesystem;
 use Gaufrette\Extras\Resolvable\ResolvableFilesystem;
 use Gaufrette\Extras\Resolvable\Resolver\StaticUrlResolver;
