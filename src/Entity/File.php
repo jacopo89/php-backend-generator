@@ -16,7 +16,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     collectionOperations={"get"},
  * )
  * @ORM\Entity()
- * @ORM\EntityListeners({"BackendGenerator\Bundle\Listener\FileListener"})
+ * @ORM\EntityListeners({"BackendGenerator\Bundle\BackendGeneratorBundle\Listener\FileListener"})
  * @ImageFile(groups={"imagefile"})
  * @PdfFile(groups={"pdffile"})
  */

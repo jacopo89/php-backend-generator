@@ -1,6 +1,6 @@
 <?php
 
-namespace BackendGenerator\Bundle;
+namespace BackendGenerator\Bundle\BackendGeneratorBundle;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
