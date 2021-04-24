@@ -20,12 +20,5 @@ class BackendGeneratorExtension extends Extension
         );
         $loader->load('services.yaml');
         $loader->load('routes.yaml');
-
-        $packageLoader = new YamlFileLoader(
-            $container,
-            new FileLocator(__DIR__.'/../Resources/config/packages')
-        );
-
-        $packageLoader->load("api_platform.yaml");
     }
 }
