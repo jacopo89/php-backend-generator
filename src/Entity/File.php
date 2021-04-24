@@ -11,11 +11,8 @@ use BackendGenerator\Bundle\BackendGeneratorBundle\Model\FileToUpload;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
- *     attributes={"security"="is_granted(constant('\\BackendGenerator\Bundle\\Model\\UserRoles::ADMIN'))"},
- *     collectionOperations={"get"},
- * )
- * @ORM\Entity()
+ *
+ * @ORM\MappedSuperclass()
  * @ORM\EntityListeners({"BackendGenerator\Bundle\BackendGeneratorBundle\Listener\FileListener"})
  * @ImageFile(groups={"imagefile"})
  * @PdfFile(groups={"pdffile"})
