@@ -103,11 +103,14 @@ class ResourceService
 
             case "reference":{
                 $resourceName = $this->getResourceStaticElements($annotation->targetClass)["resourceName"];
+                $embeddedResource = $this->resourceProvider->get($resourceName);
                 $optionText = $this->getResourceStaticElements($annotation->targetClass)["optionText"];
+                $json[JsonData::RESOURCE] = $this->resourceAnalyzer($embeddedResource, $resource);
                 $json[JsonData::RESOURCE_NAME] = $resourceName;
                 $json[JsonData::OPTIONTEXT] = $optionText;
 
             }break;
+            case "enum_multiple":
             case "enum":{
                 $json = $this->handleEnumAnnotation($annotation, $json, $property);
             }break;
@@ -171,8 +174,7 @@ class ResourceService
             $newOptions[] = $newOption;
         }
         $json[JsonData::OPTIONS] = $newOptions;
-        $json[JsonData::TYPE] = JsonData::ENUM;
-        $json[JsonData::CARDINALITY] = 1;
+        $json[JsonData::TYPE] = $annotation->type;
 
         return $json;
 
@@ -215,6 +217,13 @@ class ResourceService
                     foreach ($annotation->properties as $propName => $value){
                         $filters["boolean"][] = $value;
                     }
+                    break;
+                }
+                case ArrayFilter::class:{
+                    foreach ($annotation->properties as $propName => $value){
+                        $filters["enum_multiple"][] = $value;
+                    }
+                    break;
                 }
             }
         }
@@ -234,6 +243,8 @@ class ResourceService
         $fileDenormalizationGroup = "file:write";
         $workflowNormalizationGroup = "workflow:read";
         $workflowDenormalizationGroup = "workflow:write";
+        $resourceDenormalizationAdminGroup = $resourceName.":admin:write";
+        $resourceNormalizationAdminGroup = $resourceName.":admin:read";
 
         $groupClass = $this->annotationReader->getPropertyAnnotation($property, \Symfony\Component\Serializer\Annotation\Groups::class );
 
@@ -242,8 +253,8 @@ class ResourceService
         $groups = $groupClass->getGroups();
         $groups = array_map(function($item){ return strtolower($item);}, $groups);
 
-        $isWritable = (in_array($resourceDenormalizationGroup, $groups) || in_array($fileDenormalizationGroup, $groups)||in_array($workflowDenormalizationGroup, $groups));
-        $isReadable = (in_array($resourceNormalizationGroup, $groups) || in_array($fileNormalizationGroup, $groups)|| in_array($workflowNormalizationGroup, $groups));
+        $isWritable = (in_array($resourceDenormalizationGroup, $groups) || in_array($fileDenormalizationGroup, $groups)||in_array($workflowDenormalizationGroup, $groups) || in_array($resourceDenormalizationAdminGroup, $groups));
+        $isReadable = (in_array($resourceNormalizationGroup, $groups) || in_array($fileNormalizationGroup, $groups)|| in_array($workflowNormalizationGroup, $groups) || in_array($resourceDenormalizationAdminGroup, $groups));
 
         return $isReadable || $isWritable;
     }
@@ -261,7 +272,7 @@ class ResourceService
     private function setWriteRead(ReflectionProperty $property, ResourceInterface $resource, $json, $type)
     {
         if($type==="id"){
-            $json[JsonData::WRITE] = false;
+            $json[JsonData::WRITE] = true;
             $json[JsonData::READ] = false;
             return $json;
         }
@@ -269,9 +280,12 @@ class ResourceService
         $resourceClass = new ReflectionClass($resource);
         $resourceName = strtolower($resourceClass->getShortName());
         $resourceDenormalizationGroup = $resourceName.":write";
+        $resourceDenormalizationAdminGroup = $resourceName.":admin:write";
+        $resourceNormalizationAdminGroup = $resourceName.":admin:read";
         $resourceNormalizationGroup = $resourceName.":read";
         $fileNormalizationGroup = "file:read";
         $fileDenormalizationGroup = "file:write";
+        $fileDenormalizationGroupBase = "base64file:write";
         $workflowNormalizationGroup = "workflow:read";
         $workflowDenormalizationGroup = "workflow:write";
 
@@ -279,8 +293,8 @@ class ResourceService
         $groups = $groupClass->getGroups();
         $groups = array_map(function($item){ return strtolower($item);}, $groups);
 
-        $isWritable = (in_array($resourceDenormalizationGroup, $groups) || in_array($fileDenormalizationGroup, $groups)||in_array($workflowDenormalizationGroup, $groups));
-        $isReadable = (in_array($resourceNormalizationGroup, $groups) || in_array($fileNormalizationGroup, $groups)|| in_array($workflowNormalizationGroup, $groups));
+        $isWritable = (in_array($resourceDenormalizationGroup, $groups) || in_array($fileDenormalizationGroup, $groups)||in_array($workflowDenormalizationGroup, $groups) || in_array($fileDenormalizationGroupBase, $groups) || in_array($workflowNormalizationGroup, $groups) || in_array($resourceDenormalizationAdminGroup, $groups));
+        $isReadable = (in_array($resourceNormalizationGroup, $groups) || in_array($fileNormalizationGroup, $groups)|| in_array($workflowNormalizationGroup, $groups) || in_array($resourceNormalizationAdminGroup, $groups));
 
         $json[JsonData::WRITE] = $isWritable;
         $json[JsonData::READ] = $isReadable;

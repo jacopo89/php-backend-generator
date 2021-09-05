@@ -23,7 +23,7 @@ final class ResourceProperty implements Annotation
     /**
      * @var string
      * @required
-     * @Enum({"id","reference", "text", "enum", "embedded_single", "embedded_multiple", "file_single", "file_multiple", "string", "boolean", "date", "integer", "float", "array", "phone", "money"})
+     * @Enum({"id","reference", "textarea","text","reference_file", "enum", "embedded_single", "embedded_multiple", "file_single", "file_multiple", "string", "boolean", "date", "integer", "float", "array", "phone", "money", "enum_multiple"})
      */
     public string $type;
 
